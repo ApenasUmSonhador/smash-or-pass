@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/health", (req, res) => {
-  return res.status(200).json({ status: "ok" });
+  return res.status(200).json({ status: "ok" , message: "API is running!" });
 });
 
 const PORT = 3000;
