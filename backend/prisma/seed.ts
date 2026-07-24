@@ -49,8 +49,14 @@ async function main() {
   // SENHA PADRÃO
   // =====================================
 
+  const seedPassword = process.env.SEED_PASSWORD;
+
+  if (!seedPassword) {
+    throw new Error("SEED_PASSWORD must be defined before running the seed.");
+  }
+
   const passwordHash = await bcrypt.hash(
-    "12345678",
+    seedPassword,
     10
   );
 
