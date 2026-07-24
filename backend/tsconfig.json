@@ -5,8 +5,8 @@
 
     "target": "ES2022",
 
-    "module": "commonjs",
-    "moduleResolution": "Node",
+    "module": "nodenext",
+    "moduleResolution": "node16",
 
     "strict": true,
 
@@ -18,10 +18,10 @@
 
     "sourceMap": true,
 
-    "types": ["node", "jest"],
+    "types": ["node"]
 
   },
 
-  "include": ["src", "tests", "prisma", "uploads"],
+  "include": ["src", "prisma", "uploads"],
   "exclude": ["node_modules", "dist"]
 }

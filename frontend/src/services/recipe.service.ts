@@ -71,7 +71,9 @@ export function resolveImageUrl(
 	return `${API_URL}${url.startsWith("/") ? "" : "/"}${url}`;
 }
 
-function buildIngredientLabel(item: ApiRecipe["ingredients"][number]): string {
+type ApiIngredient = NonNullable<ApiRecipe["ingredients"]>[number];
+
+function buildIngredientLabel(item: ApiIngredient): string {
 	const quantity = item.quantity ?? "";
 	const unit = item.unit ?? "";
 	const name = item.ingredient?.name ?? "";

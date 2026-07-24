@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from "express";
 
 import { UsersService } from "./users.service";
 import { updateProfileSchema, updateUserAllergensSchema, updateUserDietPreferencesSchema } from "./users.schemas";
+import { getParamId } from "../../utils/get-param-id";
 
 export class UsersController {
   private service = new UsersService();
@@ -162,7 +163,7 @@ export class UsersController {
       const data =
         await this.service.getMyRecipeById(
           req.user!.id,
-          req.params.id
+          getParamId(req)
         );
 
       return res.json(data);
