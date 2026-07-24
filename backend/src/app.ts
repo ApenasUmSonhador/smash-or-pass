@@ -3,7 +3,7 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import { errorMiddleware } from "./middlewares/error.middleware";
-
+import { env } from "./config/env";
 import routes from "./routes";
 import swaggerRouter from "./swagger";
 import { ensureUploadDirectories } from "./utils/ensure-upload-directories";
@@ -21,7 +21,23 @@ app.use(
     crossOriginResourcePolicy: { policy: "cross-origin" },
   }),
 );
-app.use(cors());
+
+const allowedOrigins = env.CORS_ORIGINS
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
+app.use(
+  cors({
+    origin(origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(null, false);
+    },
+  })
+);
 
 app.use(express.json());
 
