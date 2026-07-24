@@ -1,7 +1,7 @@
 import { prisma } from "../../lib/prisma";
 
 import { HttpError } from "../../utils/http-error";
-import { LocalStorageProvider } from "../../storage/local-storage-provider";
+import { createStorageProvider } from "../../storage/storage-provider.factory";
 import { StorageService } from "../../storage/storage.service";
 import { UploadFolder } from "../../storage/types";
 
@@ -9,7 +9,7 @@ import { UpdateProfileDto } from "./users.schemas";
 
 export class UsersService {
   private storage = new StorageService(
-    new LocalStorageProvider()
+    createStorageProvider()
   );
 
   async listUsers() {
