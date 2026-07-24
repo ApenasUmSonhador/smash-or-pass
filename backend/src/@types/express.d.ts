@@ -1,4 +1,4 @@
-import { RoleName } from "../generated/prisma";
+import { RoleName } from "@prisma/client";
 import { UploadFile } from "../storage/types";
 
 declare global {

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { InteractionType } from "../../generated/prisma";
+import { InteractionType } from "@prisma/client";
 
 export const swipeSchema = z.object({
   recipeId: z.uuid(),

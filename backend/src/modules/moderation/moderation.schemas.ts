@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { ModerationStatus } from "../../generated/prisma";
+import { ModerationStatus } from "@prisma/client";
 
 export const moderationIdParamSchema = z.object({
   id: z.uuid(),

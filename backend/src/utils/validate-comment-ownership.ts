@@ -1,5 +1,5 @@
 import { RoleName }
-  from "../generated/prisma";
+  from "@prisma/client";
 
 import { HttpError }
   from "./http-error";

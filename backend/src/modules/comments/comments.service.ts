@@ -1,4 +1,4 @@
-import { RoleName } from "../../generated/prisma/wasm";
+import { RoleName } from "@prisma/client";
 import { prisma } from "../../lib/prisma";
 import { HttpError } from "../../utils/http-error";
 import { validateCommentOwnership } from "../../utils/validate-comment-ownership";

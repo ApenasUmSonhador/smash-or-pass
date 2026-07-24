@@ -2,7 +2,7 @@ import { Router } from "express";
 import { ModerationController } from "./moderation.controller";
 import { authMiddleware } from "../../middlewares/auth.middleware";
 import { roleMiddleware } from "../../middlewares/role.middleware";
-import { RoleName } from "../../generated/prisma";
+import { RoleName } from "@prisma/client";
 
 const router = Router();
 const controller = new ModerationController();

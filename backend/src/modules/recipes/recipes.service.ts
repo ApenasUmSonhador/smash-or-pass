@@ -11,7 +11,7 @@ import {
 import {
   validateRecipeOwnership,
 } from "../../utils/validate-recipe-ownership";
-import { RoleName } from "../../generated/prisma";
+import { RoleName } from "@prisma/client";
 import { LocalStorageProvider } from "../../storage/local-storage-provider";
 import { StorageService } from "../../storage/storage.service";
 import { UploadFolder } from "../../storage/types";

@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 
-import { RoleName } from "../generated/prisma";
+import { RoleName } from "@prisma/client";
 
 import { HttpError } from "../utils/http-error";
 

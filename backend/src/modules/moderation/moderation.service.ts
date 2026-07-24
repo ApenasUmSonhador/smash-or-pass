@@ -1,6 +1,6 @@
 import { prisma } from "../../lib/prisma";
 import { HttpError } from "../../utils/http-error";
-import { ModerationStatus } from "../../generated/prisma";
+import { ModerationStatus } from "@prisma/client";
 
 export class ModerationService {
   async listPending() {

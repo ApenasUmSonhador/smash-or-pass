@@ -2,7 +2,7 @@ import { Router } from "express";
 
 import { authMiddleware } from "../../middlewares/auth.middleware";
 import { roleMiddleware } from "../../middlewares/role.middleware";
-import { RoleName } from "../../generated/prisma";
+import { RoleName } from "@prisma/client";
 
 import { UsersController } from "./users.controller";
 import { uploadAvatar } from "../../middlewares/upload.middleware";

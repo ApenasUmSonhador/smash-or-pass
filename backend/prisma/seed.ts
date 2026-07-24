@@ -6,7 +6,7 @@ import {
   InteractionType,
   ModerationStatus,
   RoleName,
-} from "../src/generated/prisma";
+} from "@prisma/client;
 
 const prisma = new PrismaClient();
 

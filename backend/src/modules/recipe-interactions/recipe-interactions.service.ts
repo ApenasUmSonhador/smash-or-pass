@@ -1,6 +1,6 @@
 import { prisma } from "../../lib/prisma";
 import { HttpError } from "../../utils/http-error";
-import { InteractionType } from "../../generated/prisma";
+import { InteractionType } from "@prisma/client";
 
 export class RecipeInteractionsService {
   async swipe(userId: string, recipeId: string, type: InteractionType) {
